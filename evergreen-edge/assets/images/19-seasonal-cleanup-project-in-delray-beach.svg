@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title-19 desc-19">
+  <title id="title-19">Seasonal Cleanup Project In Delray Beach placeholder</title>
+  <desc id="desc-19">Unique illustrated placeholder for seasonal cleanup project in delray beach.</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dce9db"/><stop offset="1" stop-color="#9cbea2"/></linearGradient></defs>
+  <rect width="1400" height="920" fill="url(#sky)"/><circle cx="1230" cy="157" r="74" fill="#f2db9a"/><path d="M0 455 C180 339 355 470 530 382 S850 470 1040 350 S1240 390 1400 306 V920H0Z" fill="#6f9d70"/><path d="M0 530 C230 420 415 555 630 444 S1050 540 1400 394 V920H0Z" fill="#286247"/><path d="M0 620H1400V920H0Z" fill="#1b4d36"/><g fill="#b48a4b"><path d="M240 730l72-185 30 10-72 185z"/><path d="M285 733l120-5-8 54-115-8z"/></g><g fill="#9b6c3b"><ellipse cx="705" cy="730" rx="75" ry="24" transform="rotate(20 705 730)"/><ellipse cx="925" cy="682" rx="62" ry="19" transform="rotate(-30 925 682)"/></g>
+  <rect x="42" y="42" width="480" height="85" rx="4" fill="#103a2a" opacity=".88"/>
+  <text x="68" y="78" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">EVERGREEN EDGE / CLEANUP</text>
+  <text x="68" y="105" fill="#dcebd6" font-family="Arial, sans-serif" font-size="13">SECTION IMAGE PLACEHOLDER 19</text>
+</svg>

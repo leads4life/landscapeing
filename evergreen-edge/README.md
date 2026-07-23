@@ -5,6 +5,11 @@ A static, multi-page HTML5/CSS3/vanilla JavaScript website for the fictional Eve
 ## Structure
 `index.html` is the homepage. The remaining HTML files are dedicated service, residential, commercial, projects, service-area, about, contact, privacy, and thank-you pages. `styles.css` contains brand styling, `script.js` supplies progressive enhancements, and `form-handler.php` is an optional shared-hosting form endpoint. Image, icon, and logo directories are provided under `assets/` for future local assets.
 
+## Design-system settings
+The presentation uses **Manrope** for headings and **Inter** for body/interface text, with system-font fallbacks. This pairing keeps large editorial headlines expressive while preserving excellent legibility in service details, forms, and navigation. The responsive type scale is deliberate: headings run from `2.75rem` to `5.2rem`, section headings from `2rem` to `3.35rem`, body copy is `16px` at a `1.72` line height, and compact navigation labels are `0.72rem` in Manrope at a restrained `0.025em` letter spacing.
+
+The desktop header is `84px` tall so the brand mark, navigation, and primary CTA have breathable vertical alignment. Once a visitor scrolls, it compacts to `66px` to preserve content space while keeping the main navigation available. The announcement band is intentionally `0.78rem`; the primary CTA is at least `46px` tall for comfortable pointer and touch use. On small screens, the two-action footer bar uses a minimum `15px` vertical padding and the document reserves bottom spacing so it never covers content. All of these values are defined in `styles.css` and should be adjusted as a system rather than piecemeal.
+
 ## Open locally
 Open `index.html` directly in a modern browser; navigation and JavaScript features work without a build step. Tailwind and the optional web fonts are loaded from their CDNs, while the current SVG image placeholders are local and display without an image-hosting connection.
 
