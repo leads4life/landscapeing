@@ -1,6 +1,94 @@
-(() => { const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)]; const header=$('#site-header'), menu=$('.menu-button'), mobile=$('#mobile-menu');
-function closeMenu(){if(!menu)return; menu.setAttribute('aria-expanded','false'); mobile.hidden=true; menu.focus();} if(menu){menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));mobile.hidden=open;});$$('a',mobile).forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');mobile.hidden=true;}));}
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(mobile&&!mobile.hidden)closeMenu();closeLightbox();}}); window.addEventListener('scroll',()=>{header?.classList.toggle('is-compact',scrollY>25);$('.scroll-top')?.classList.toggle('show',scrollY>450)},{passive:true});$('.scroll-top')?.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));$$('.faq-item button').forEach(b=>b.addEventListener('click',()=>{const a=b.closest('.faq-item').querySelector('.faq-answer'),open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));a.hidden=open;b.lastElementChild.textContent=open?'+':'–';}));
-$$('[data-phone]').forEach(i=>i.addEventListener('input',()=>{let d=i.value.replace(/\D/g,'').slice(0,10);i.value=d.length>6?`(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}`:d.length>3?`(${d.slice(0,3)}) ${d.slice(3)}`:d;}));$$('.estimate-form').forEach(f=>f.addEventListener('submit',e=>{const status=$('.form-status',f); if(!f.checkValidity()){e.preventDefault();status.textContent='Please complete the required fields and check your email address.';status.className='form-status error';f.querySelector(':invalid')?.focus();return;}if(location.protocol==='file:'){e.preventDefault();status.textContent='Demo request received. On hosting with PHP, this form sends to the configured mailbox.';status.className='form-status';f.reset();}}));
-$$('.filter-button').forEach(b=>b.addEventListener('click',()=>{$$('.filter-button').forEach(x=>x.classList.remove('is-active'));b.classList.add('is-active');$$('.filter-item').forEach(i=>i.hidden=b.dataset.filter!=='all'&&i.dataset.category!==b.dataset.filter);}));let lastFocus;const light=$('#lightbox');function closeLightbox(){if(light&&!light.hidden){light.hidden=true;document.body.classList.remove('no-scroll');lastFocus?.focus();}}$$('.project-open').forEach(b=>b.addEventListener('click',()=>{lastFocus=b;$('#lightbox img').src=b.dataset.image;$('#lightbox img').alt=b.dataset.alt;$('#lightbox p').textContent=b.dataset.alt;light.hidden=false;document.body.classList.add('no-scroll');$('.lightbox-close').focus();}));$('.lightbox-close')?.addEventListener('click',closeLightbox);light?.addEventListener('click',e=>{if(e.target===light)closeLightbox();}); if(light)light.addEventListener('keydown',e=>{if(e.key==='Tab'){const f=$$('.lightbox-close',light);if(f.length){e.preventDefault();f[0].focus();}}});
-const slides=$$('.testimonial');let current=0;function show(n){slides.forEach((s,i)=>s.classList.toggle('is-active',i===n));}const controls=$$('.slider-controls');if(controls&&slides.length){$$('button',controls)[0].addEventListener('click',()=>{current=(current-1+slides.length)%slides.length;show(current)});$$('button',controls)[1].addEventListener('click',()=>{current=(current+1)%slides.length;show(current)});if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{current=(current+1)%slides.length;show(current)},6500);}$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=$(a.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}})); if(!localStorage.getItem('evergreen-notice-dismissed')) localStorage.setItem('evergreen-notice-dismissed','1');$$('.year').forEach(y=>y.textContent=new Date().getFullYear());})();
+(() => {
+  'use strict';
+  const $ = (selector, context = document) => context.querySelector(selector);
+  const $$ = (selector, context = document) => [...context.querySelectorAll(selector)];
+  const header = $('#site-header');
+  const menuButton = $('.menu-button');
+  const mobileMenu = $('#mobile-menu');
+  let lastFocus;
+
+  function setMenu(open, returnFocus = false) {
+    if (!menuButton || !mobileMenu) return;
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    mobileMenu.hidden = !open;
+    document.body.classList.toggle('no-scroll', open);
+    if (open) $('a', mobileMenu)?.focus();
+    if (!open && returnFocus) menuButton.focus();
+  }
+  menuButton?.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
+  $$('a', mobileMenu).forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', event => {
+    if (mobileMenu && !mobileMenu.hidden && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) setMenu(false);
+  });
+
+  const lightbox = $('#lightbox');
+  function closeLightbox() {
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    document.body.classList.remove('no-scroll');
+    lastFocus?.focus();
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    if (mobileMenu && !mobileMenu.hidden) setMenu(false, true);
+    closeLightbox();
+  });
+
+  window.addEventListener('scroll', () => {
+    header?.classList.toggle('is-compact', window.scrollY > 25);
+    $('.scroll-top')?.classList.toggle('show', window.scrollY > 450);
+  }, { passive: true });
+  $('.scroll-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  $$('.faq-item').forEach((item, index) => {
+    const button = $('button', item); const answer = $('.faq-answer', item);
+    if (!button || !answer) return;
+    const buttonId = `faq-button-${index + 1}`; const answerId = `faq-answer-${index + 1}`;
+    button.id = buttonId; button.setAttribute('aria-controls', answerId);
+    answer.id = answerId; answer.setAttribute('role', 'region'); answer.setAttribute('aria-labelledby', buttonId);
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', String(!open)); answer.hidden = open;
+      button.lastElementChild.textContent = open ? '+' : '–';
+    });
+  });
+
+  $$('[data-phone]').forEach(input => input.addEventListener('input', () => {
+    const digits = input.value.replace(/\D/g, '').slice(0, 10);
+    input.value = digits.length > 6 ? `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}` : digits.length > 3 ? `(${digits.slice(0, 3)}) ${digits.slice(3)}` : digits;
+  }));
+  $$('.estimate-form').forEach(form => form.addEventListener('submit', event => {
+    const status = $('.form-status', form);
+    $$('.estimate-form [aria-invalid="true"]', form).forEach(field => field.removeAttribute('aria-invalid'));
+    if (!form.checkValidity()) {
+      event.preventDefault(); const invalid = $(':invalid', form); invalid?.setAttribute('aria-invalid', 'true');
+      status.textContent = 'Please complete the highlighted required field and check your email address.';
+      status.className = 'form-status error'; invalid?.focus(); return;
+    }
+    if (window.location.protocol === 'file:') { event.preventDefault(); status.textContent = 'Demo request received. Configure a hosted form endpoint before publishing.'; status.className = 'form-status'; form.reset(); }
+  }));
+
+  $$('.filter-button').forEach(button => button.addEventListener('click', () => {
+    $$('.filter-button').forEach(item => item.classList.remove('is-active')); button.classList.add('is-active');
+    $$('.filter-item').forEach(item => { item.hidden = button.dataset.filter !== 'all' && item.dataset.category !== button.dataset.filter; });
+  }));
+  $$('.project-open').forEach(button => button.addEventListener('click', () => {
+    if (!lightbox) return; lastFocus = button;
+    $('img', lightbox).src = button.dataset.image; $('img', lightbox).alt = button.dataset.alt;
+    $('p', lightbox).textContent = button.dataset.alt; lightbox.hidden = false; document.body.classList.add('no-scroll'); $('.lightbox-close', lightbox)?.focus();
+  }));
+  $('.lightbox-close')?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+
+  const slides = $$('.testimonial'); let current = 0;
+  const show = index => slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+  const controls = $('.slider-controls');
+  if (controls && slides.length) {
+    const [previousButton, nextButton] = $$('button', controls);
+    previousButton?.addEventListener('click', () => { current = (current - 1 + slides.length) % slides.length; show(current); });
+    nextButton?.addEventListener('click', () => { current = (current + 1) % slides.length; show(current); });
+  }
+  $$('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', event => { const target = $(anchor.getAttribute('href')); if (target) { event.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); } }));
+  $$('.year').forEach(year => { year.textContent = new Date().getFullYear(); });
+})();
