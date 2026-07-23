@@ -54,6 +54,7 @@
     });
   });
 
+  $$('[data-future-date]').forEach(input => { input.min = new Date().toISOString().slice(0, 10); });
   $$('[data-phone]').forEach(input => input.addEventListener('input', () => {
     const digits = input.value.replace(/\D/g, '').slice(0, 10);
     input.value = digits.length > 6 ? `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}` : digits.length > 3 ? `(${digits.slice(0, 3)}) ${digits.slice(3)}` : digits;

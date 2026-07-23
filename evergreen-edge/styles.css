@@ -5,7 +5,8 @@
   --primary: #133c2b;
   --primary-deep: #0b281d;
   --secondary: #3f805a;
-  --accent: #c9a15b;
+  /* Dark enough for text, focus indicators, and large numerals on light surfaces. */
+  --accent: #9a681f;
   --accent-pale: #f5eddd;
   --text: #1d2c24;
   --muted: #647169;
@@ -245,7 +246,8 @@ footer { padding: 72px 0 25px; background: var(--primary-deep); color: #cdd9d0; 
   .map-placeholder, .static-map { min-height: 285px; border-radius: 28% 0 28% 0; }
   .testimonial { min-height: 0; padding: 30px 21px; }
   .testimonial blockquote { font-size: 1.16rem; }
-  .filter-bar, .anchor-nav { gap: 7px; margin-bottom: 25px; }
+  .filter-bar { flex-wrap: nowrap; gap: 7px; margin: 0 -16px 25px; padding: 0 16px 8px; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-width: thin; }
+  .anchor-nav { gap: 7px; margin-bottom: 25px; }
   .filter-button, .anchor-nav a { min-height: 39px; padding: 8px 10px; font-size: .62rem; }
   .form-grid { grid-template-columns: 1fr; }
   .estimate-form { gap: 14px; }
