@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc">
+  <title id="title">Evergreen Edge landscape image placeholder 5</title>
+  <desc id="desc">Editorial vector placeholder for a South Florida lawn and landscape project image.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dce9dc"/><stop offset="1" stop-color="#9bbda0"/></linearGradient>
+    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4e8b61"/><stop offset="1" stop-color="#1b4a34"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .06 0"/></filter>
+  </defs>
+  <rect width="1400" height="920" fill="url(#sky)"/>
+  <circle cx="1110" cy="160" r="78" fill="#f4e6bd" opacity=".88"/>
+  <path d="M0 430 C180 340 310 400 490 330 S790 385 1000 308 S1260 350 1400 270 V920H0Z" fill="#6c9d72"/>
+  <path d="M0 515 C240 410 396 515 590 430 S970 505 1400 376 V920H0Z" fill="url(#lawn)"/>
+  <path d="M0 755 C260 690 430 795 670 731 S1060 770 1400 700 V920H0Z" fill="#123b2a" opacity=".56"/>
+  <path d="M100 690 C380 590 620 615 790 555 S1120 495 1380 550" fill="none" stroke="#d2ad64" stroke-width="15" opacity=".9"/>
+  <g fill="#174732"><path d="M205 486l45-195 45 195z"/><path d="M280 500l53-238 53 238z"/><path d="M1020 455l56-242 56 242z"/><path d="M1135 470l40-178 40 178z"/></g>
+  <rect width="1400" height="920" filter="url(#grain)" opacity=".25"/>
+  <g fill="#fff" font-family="Arial, sans-serif" letter-spacing="5"><text x="68" y="90" font-size="20" opacity=".78">EVERGREEN EDGE</text><text x="68" y="122" font-size="12" opacity=".66">IMAGE PLACEHOLDER 05</text></g>
+</svg>
