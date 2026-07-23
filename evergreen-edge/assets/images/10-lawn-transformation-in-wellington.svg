@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title-10 desc-10">
+  <title id="title-10">Lawn Transformation In Wellington placeholder</title>
+  <desc id="desc-10">Unique illustrated placeholder for lawn transformation in wellington.</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dce9db"/><stop offset="1" stop-color="#9cbea2"/></linearGradient></defs>
+  <rect width="1400" height="920" fill="url(#sky)"/><circle cx="1160" cy="157" r="74" fill="#f2db9a"/><path d="M0 455 C180 366 355 470 530 382 S850 470 1040 350 S1240 390 1400 306 V920H0Z" fill="#6f9d70"/><path d="M0 530 C230 420 415 555 630 444 S1050 540 1400 394 V920H0Z" fill="#286247"/><path d="M0 585H1400V920H0Z" fill="#1b5038"/><g fill="none" stroke="#79a968" stroke-width="36" opacity=".9"><path d="M-80 680C260 530 580 760 900 590S1260 570 1500 470"/><path d="M-80 820C250 665 620 870 920 710S1250 710 1500 590"/></g><path d="M0 758C260 685 520 776 760 710S1120 735 1400 650" fill="none" stroke="#d5ae61" stroke-width="12"/>
+  <rect x="42" y="42" width="480" height="85" rx="4" fill="#103a2a" opacity=".88"/>
+  <text x="68" y="78" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">EVERGREEN EDGE / LAWN</text>
+  <text x="68" y="105" fill="#dcebd6" font-family="Arial, sans-serif" font-size="13">SECTION IMAGE PLACEHOLDER 10</text>
+</svg>
