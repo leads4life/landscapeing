@@ -1,0 +1,5 @@
+const menu=document.querySelector('.menu'),nav=document.querySelector('.nav');
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';nav.classList.toggle('open',open)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){menu.click();menu.focus()}});
+document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));document.querySelectorAll('[data-category]').forEach(card=>card.hidden=button.dataset.filter!=='all'&&card.dataset.category!==button.dataset.filter)}));
+document.querySelector('.form')?.addEventListener('submit',e=>{e.preventDefault();const status=document.querySelector('#form-status');status.textContent='Demo only — your information has not been sent or saved. Please call (772) 263-2801 to discuss your project.';status.focus()});

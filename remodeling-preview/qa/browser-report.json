@@ -1,0 +1,284 @@
+{
+  "label": "MEASURED",
+  "checks": [
+    {
+      "device": "desktop",
+      "route": "index.html",
+      "title": "Thoughtful spaces. Elevated living. | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "services.html",
+      "title": "Our services | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "kitchen-remodeling.html",
+      "title": "Kitchen remodeling | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "bathroom-remodeling.html",
+      "title": "Bathroom remodeling | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "whole-home-renovations.html",
+      "title": "Whole-home renovations | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "new-construction.html",
+      "title": "New construction inquiries | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "portfolio.html",
+      "title": "Project inspiration | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "about.html",
+      "title": "Our approach | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "route": "contact.html",
+      "title": "Request a consultation | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "desktop",
+      "test": "inspiration filter",
+      "passed": true
+    },
+    {
+      "device": "desktop",
+      "test": "demo form clearly states no delivery",
+      "passed": true
+    },
+    {
+      "device": "tablet",
+      "route": "index.html",
+      "title": "Thoughtful spaces. Elevated living. | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "services.html",
+      "title": "Our services | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "kitchen-remodeling.html",
+      "title": "Kitchen remodeling | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "bathroom-remodeling.html",
+      "title": "Bathroom remodeling | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "whole-home-renovations.html",
+      "title": "Whole-home renovations | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "new-construction.html",
+      "title": "New construction inquiries | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "portfolio.html",
+      "title": "Project inspiration | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "about.html",
+      "title": "Our approach | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "route": "contact.html",
+      "title": "Request a consultation | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "tablet",
+      "test": "inspiration filter",
+      "passed": true
+    },
+    {
+      "device": "tablet",
+      "test": "demo form clearly states no delivery",
+      "passed": true
+    },
+    {
+      "device": "mobile",
+      "route": "index.html",
+      "title": "Thoughtful spaces. Elevated living. | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "services.html",
+      "title": "Our services | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "kitchen-remodeling.html",
+      "title": "Kitchen remodeling | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "bathroom-remodeling.html",
+      "title": "Bathroom remodeling | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "whole-home-renovations.html",
+      "title": "Whole-home renovations | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "new-construction.html",
+      "title": "New construction inquiries | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "portfolio.html",
+      "title": "Project inspiration | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "about.html",
+      "title": "Our approach | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "route": "contact.html",
+      "title": "Request a consultation | Premium Remodeling & Construction",
+      "h1": 1,
+      "overflow": false,
+      "brokenImages": 0,
+      "main": true
+    },
+    {
+      "device": "mobile",
+      "test": "menu open and Escape close",
+      "passed": true
+    },
+    {
+      "device": "mobile",
+      "test": "inspiration filter",
+      "passed": true
+    },
+    {
+      "device": "mobile",
+      "test": "demo form clearly states no delivery",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

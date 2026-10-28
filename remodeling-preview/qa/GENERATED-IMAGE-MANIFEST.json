@@ -1,0 +1,29 @@
+[
+  {
+    "path": "site/assets/images/sunset-kitchen.png",
+    "source": "/workspace/generated_images/exec-c698bd3c-e51b-4b4d-bb10-376f38195fee.png",
+    "purpose": "Kitchen hero; illustrative concept",
+    "origin": "AI-generated with image_gen",
+    "sha256": "17e0df3a42f30d1fbd0a4daa68bd3f6b299b3f7c590230f69bbd555ca44431db",
+    "concept_A_identity_match": "NOT_VERIFIED",
+    "status": "GENERATED_NOT_LOCKED"
+  },
+  {
+    "path": "site/assets/images/travertine-bathroom.png",
+    "source": "/workspace/generated_images/exec-84502e8b-54b1-4bf4-bf60-e4213413889b.png",
+    "purpose": "Bathroom remodeling; illustrative concept",
+    "origin": "AI-generated with image_gen",
+    "sha256": "542a055215e141cf0aa16c8662125529758d07430053e989ea73b14c0e0c5c00",
+    "concept_A_identity_match": "NOT_VERIFIED",
+    "status": "GENERATED_NOT_LOCKED"
+  },
+  {
+    "path": "site/assets/images/coastal-residence.png",
+    "source": "/workspace/generated_images/exec-aee3aa04-10bf-4b68-97dd-8b14e3c93c38.png",
+    "purpose": "New construction; illustrative concept",
+    "origin": "AI-generated with image_gen",
+    "sha256": "54ca712ba57fcc2f5e8d34af0a762b6b19b02cb494566c7f3a9f4c6a3eaacf3a",
+    "concept_A_identity_match": "NOT_VERIFIED",
+    "status": "GENERATED_NOT_LOCKED"
+  }
+]

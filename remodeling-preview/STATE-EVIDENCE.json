@@ -1,0 +1,11 @@
+{
+  "run_state": "INIT",
+  "disposition": "BLOCKED",
+  "artifact": "NEW_PREVIEW_UNVERIFIED",
+  "original_concept_A_reference": "MISSING",
+  "preview_routes": 9,
+  "engine_gates_waived": false,
+  "polisher": "NOT_EXECUTED",
+  "independent_release_audit": "NOT_EXECUTED",
+  "original_choice": "A recorded in startup prompt; image unavailable"
+}
